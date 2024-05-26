@@ -13,7 +13,7 @@ html{
   }
      body{
             background-color: rgb(15, 14, 14);
-            background: url('../images/bg-profile4.png');
+            background: url('images/profile4.webp');
             background-repeat: no-repeat;
             background-size: cover;
             /* backdrop-filter: blur(8px);
@@ -21,7 +21,6 @@ html{
             animation: slidein 100s forwards infinite alternate;
             margin: 0 !important;
             padding: 0 !important;
-            height: 100% !important;
           
         }
 
