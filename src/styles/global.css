@@ -13,7 +13,7 @@ html{
   }
      body{
             background-color: rgb(15, 14, 14);
-            background: url('images/bg-profile4.webp') !important;
+            /* background: url('images/bg-profile4.webp') !important; */
             background-repeat: no-repeat;
             background-size: cover;
             backdrop-filter: blur(8px);
