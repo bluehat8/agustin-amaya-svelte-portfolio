@@ -13,7 +13,7 @@ html{
   }
      body{
             /* background-color: rgb(15, 14, 14); */
-             background: url('../../static/images/bg-profile2.png') !important; 
+             background-image: url('../../static/images/bg-profile2.png') !important; 
             /* background: url('images/bg-profile2.png') !important;  */
             background-repeat: no-repeat;
             background-size: cover;
