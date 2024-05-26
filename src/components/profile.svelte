@@ -1,5 +1,7 @@
 <script lang="ts">
 import About from '../components/about.svelte';
+import Skills from '../components/skills.svelte';
+
 import '../styles/global.css'
 
 let activeLink = 'about';
@@ -98,6 +100,7 @@ function handleLinkClick(linkId : string) {
                 {#if activeLink === 'about'}
                   <About />
                 {:else if activeLink === 'skills'}
+                  <Skills/>
                   <!-- Renderizar el componente de Skills -->
                 {:else if activeLink === 'experience'}
                   <!-- Renderizar el componente de Experience -->
