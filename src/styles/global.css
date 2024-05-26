@@ -25,6 +25,12 @@ html{
           
         }
 
+        @media(max-width: 771px){
+          body{
+            background-color: rgb(15, 14, 14);
+          }
+        }
+
 
         @keyframes slidein {
           0%,
