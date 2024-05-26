@@ -11,13 +11,13 @@ html{
     margin: 0;
     padding: 0;
   }
-     main{
+     body{
             background-color: rgb(15, 14, 14);
-            background: url('images/bg-profile4.webp');
+            background: url('images/bg-profile4.webp') !important;
             background-repeat: no-repeat;
             background-size: cover;
-            /* backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);  */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); 
             animation: slidein 100s forwards infinite alternate;
             margin: 0 !important;
             padding: 0 !important;
