@@ -263,9 +263,9 @@ a:active {
 
   @media(max-width: 771px){
     .cv-button {
-        padding: 2px 6px;
+        padding: 1px 5px;
         gap: 5px;
-        font-size: 8px;
+        font-size: 6px;
       }
 
     .nav-link{
@@ -274,12 +274,12 @@ a:active {
       padding-right: 10px;
     }
 
-    body{
-      /* background-color: rgb(6, 6, 6) !important; */
-      background-image: none;
-      background: linear-gradient(to bottom, #00000F, #11192B);
-      background-size: 100% 200%;
-      background-position: center top;
+    .body{
+      background-image: none !important;
+      background: linear-gradient(to bottom, #00000F, #11192B) !important;
+      background-size: 100% 200% !important;
+      background-position: center top !important;
+      background-repeat: no-repeat;
     }
   }
 
