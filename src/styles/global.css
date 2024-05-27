@@ -263,7 +263,7 @@ a:active {
 
   @media(max-width: 771px){
     .cv-button {
-        padding: 1px 5px;
+        padding: 1px 4px;
         gap: 5px;
         font-size: 6px;
       }
@@ -274,13 +274,13 @@ a:active {
       padding-right: 10px;
     }
 
-    .body{
-      background-image: none !important;
-      background: linear-gradient(to bottom, #00000F, #11192B) !important;
-      background-size: 100% 200% !important;
+     body{
+      /* background: linear-gradient(to bottom, #00000F, #11192B) !important; */
+      background: #00000F;
+      /* background-size: 100% 200% !important;
       background-position: center top !important;
-      background-repeat: no-repeat;
-    }
+      background-repeat: no-repeat; */
+    } 
   }
 
 
