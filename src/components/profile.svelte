@@ -1,18 +1,17 @@
 <script lang="ts">
 import About from '../components/about.svelte';
 import Skills from '../components/skills.svelte';
-
+import { reveal, setDefaultOptions } from 'svelte-reveal';
 import '../styles/global.css'
 
 let activeLink = 'about';
-
 function handleLinkClick(linkId : string) {
   activeLink = linkId;
 }
 
 </script>
 
-<div class="container">
+<div class="container" use:reveal={{ preset: "fly", delay: 100}}>
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="card glassmorphism height-adapted border-0 mt-5">
@@ -23,9 +22,10 @@ function handleLinkClick(linkId : string) {
            
             <div class="menu-circle position-absolute top-0 start-0 m-4"></div>
 
-            <div class="text-end position-absolute end-0 px-4 py-3">
+            <!-- <div class="text-end position-absolute end-0 px-4 py-3"> -->
+            <div class="text-end position-absolute end-0 m-4">
 
-              <button class="cv-button">
+              <button class="cv-button mr-3">
                 <svg viewBox="0 0 256 256"  height="24" width="30" xmlns="http://www.w3.org/2000/svg">
                   <path d="M74.34 85.66a8 8 0 0 1 11.32-11.32L120 108.69V24a8 8 0 0 1 16 0v84.69l34.34-34.35a8 8 0 0 1 11.32 11.32l-48 48a8 8 0 0 1-11.32 0ZM240 136v64a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16v-64a16 16 0 0 1 16-16h52.4a4 4 0 0 1 2.83 1.17L111 145a24 24 0 0 0 34 0l23.8-23.8a4 4 0 0 1 2.8-1.2H224a16 16 0 0 1 16 16m-40 32a12 12 0 1 0-12 12a12 12 0 0 0 12-12"fill="currentColor"></path></svg>
                 DOWNLOAD CV</button>
@@ -85,7 +85,7 @@ function handleLinkClick(linkId : string) {
                     <nav class="nav nav-pills fw-bold nav-light justify-content-center mt-3 mb-3 shadow-none">
                         <a href="#about" class="nav-link" class:active-link={activeLink === 'about'} on:click={() => handleLinkClick('about')}>About</a>
                         <a href="#skills" class="nav-link" class:active-link={activeLink === 'skills'} on:click={() => handleLinkClick('skills')}>Skills</a>
-                        <a href="#experience" class="nav-link" class:active-link={activeLink === 'experience'} on:click={() => handleLinkClick('experience')}>Experience</a>
+                        <a href="#experience" class="nav-link" class:active-link={activeLink === 'experience'} on:click={() => handleLinkClick('experience')}>Timeline</a>
                         <a href="#projects" class="nav-link" class:active-link={activeLink === 'projects'} on:click={() => handleLinkClick('projects')}>Projects</a>
                     </nav>
                   </div>

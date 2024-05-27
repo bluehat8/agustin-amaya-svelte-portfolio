@@ -13,24 +13,18 @@ html{
   }
      body{
             /* background-color: rgb(15, 14, 14); */
-             /* background-image: url('../../static/images/bg-profile2.png') !important;  */
+            /* background-image: url('../../static/images/bg-profile2.png') !important; */
             background-image: url('/images/bg-profile2.png') !important; 
             background-repeat: no-repeat;
             background-size: cover;
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px); 
-            animation: slidein 100s forwards infinite alternate;
+          
+            animation: slidein 90s forwards infinite alternate;
             margin: 0 !important;
             padding: 0 !important;
           
         }
-
-        @media(max-width: 771px){
-          body{
-            background-color: rgb(15, 14, 14);
-          }
-        }
-
 
         @keyframes slidein {
           0%,
@@ -77,8 +71,8 @@ html{
         .title-card{
           position: relative;
           top: -75px;
-          padding-left: 20px !important;
-          padding-right: 20px !important;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
         }
 
         #rocket-icon {
@@ -233,6 +227,7 @@ a:active {
 
 
 .cv-button {
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,6 +267,20 @@ a:active {
         gap: 5px;
         font-size: 8px;
       }
+
+    .nav-link{
+      font-size: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    body{
+      /* background-color: rgb(6, 6, 6) !important; */
+      background-image: none;
+      background: linear-gradient(to bottom, #00000F, #11192B);
+      background-size: 100% 200%;
+      background-position: center top;
+    }
   }
 
 
@@ -293,7 +302,7 @@ a:active {
   color: #aaaaaa;
   position: relative;
   padding-bottom: 10px;
-  width: 100px;
+  width: 18%;
   flex: 1; /* Hace que cada nav-link ocupe el mismo espacio */
   text-align: center; /* Centra el texto */
   border: none;
