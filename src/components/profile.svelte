@@ -8,10 +8,10 @@ let activeLink = 'about';
 function handleLinkClick(linkId : string) {
   activeLink = linkId;
 }
-
+//use:reveal={{ preset: "fly", delay: 100}}
 </script>
 
-<div class="container" use:reveal={{ preset: "fly", delay: 100}}>
+<div class="container" >
     <div class="row">
       <div class="col-md-8 offset-md-2">
         <div class="card glassmorphism height-adapted border-0 mt-5">
