@@ -1,20 +1,31 @@
 <script>
     import '../styles/global.css'
     import { reveal, setDefaultOptions } from 'svelte-reveal';
+    import {ethVolcanoUrl} from '../scripts/urls'
 
 </script>
 
-<section id="post" class="post-section global-padding">
+<section id="post" class="post-section about-padding">
     <div class="post-content text-white">
-        <h2>Hello! 👋</h2>
-        <p>I'm Jhey (pronounced "J"). I'm a web developer that thrives on bringing ideas to life with code!</p>
-        <p>I advocate for creative coding giving you the confidence to build anything imaginable. I enjoy speaking about this and showing people how to level up their skills.</p>
-        <p>I'm known for my whimsical creations and ability to solve complex problems. This led to me getting branded as somewhat of a polyglot coder. It's incredible to me that you can open a computer and learn about anything at your fingertips!</p>
+        <h1 class="text-2xl font-bold mb-2">Hello! 👋</h1>
+        <p>I'm Agustin Amaya. I am a Systems Engineer graduated from the National University of Engineering with experience in the design and deployment of web and desktop applications using the .NET ecosystem. I work agilely with methodologies such as Scrum, and have actively participated in important projects such as job search platforms and dental management web systems.</p>
+        <br>
+        <p>            
+            I have actively participated in important projects such as job
+            search platforms, web-based dental management systems. My
+            focus is on understanding the business needs to implement
+            the most appropriate technology.   
+        </p>
+        <br>
+        <p>
+            Additionally, I am an enthusiast of blockchain technology and web3. I have assumed the role of a Smart Contract developer in various hackathons that I have participated in, winning first place in one of them for the best decentralized application on Ethereum.
+        </p>
     </div>
 
     <div class="image-container">
-      <img src="images/bg-profile3.png" alt="Descripción de la imagen" class="post-image">
-      <p class="image-caption text-secondary">Texto centrado debajo de la imagen</p>
+      <img src="{ethVolcanoUrl}" alt="Descripción de la imagen" class="post-image">
+      <p class="image-caption text-secondary mb-5">Cuchulink as the best dapp on Ethereum at the ETH Volcano 2024 hackathon
+      </p>
     </div>
   
 </section>

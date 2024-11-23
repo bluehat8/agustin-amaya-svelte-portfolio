@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -47,15 +46,7 @@ color: #fff;
     padding: 0;
   }
      body{
-            /* background-color: rgb(15, 14, 14); */
-            /* background-image: url('../../static/images/bg-profile2.png') !important; */
-            background-image: url('/images/bg-profile2.png') !important; 
-            background-repeat: no-repeat;
-            background-size: cover;
-             /* backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px); */
-          
-            animation: slidein 80s forwards infinite alternate;
+            background-color: rgb(19, 22, 32); 
             margin: 0 !important;
             padding: 0 !important;
           
@@ -76,6 +67,11 @@ color: #fff;
         .global-padding{
           padding-left: 20px !important;
           padding-right: 20px !important;
+        }
+
+        .about-padding{
+          padding-left: 60px !important;
+          padding-right: 60px !important;
         }
 
         .profile-image {
@@ -326,26 +322,24 @@ a:active {
       padding-right: 10px;
     }
 
-     body{
-      /* background: linear-gradient(to bottom, #00000F, #11192B) !important; */
-      background: #00000F;
-      /* background-size: 100% 200% !important;
-      background-position: center top !important;
-      background-repeat: no-repeat; */
-    } 
+    .about-padding{
+      padding-left: 40px !important;
+      padding-right: 40px !important;
+    }
   }
 
 
 
 .nav-light {
   background-color: transparent !important;
+  border: none !important;
 }
 
 .nav {
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
-    width: 100%; /* Ajusta el ancho del nav a 100% */
-    padding: 0; /* Quita cualquier relleno por defecto */
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 0; 
     border: none !important;
     text-shadow: none !important;
   }
@@ -355,8 +349,8 @@ a:active {
   position: relative;
   padding-bottom: 10px;
   width: 18%;
-  flex: 1; /* Hace que cada nav-link ocupe el mismo espacio */
-  text-align: center; /* Centra el texto */
+  flex: 1;
+  text-align: center;
   border: none;
   font-weight: 600;
 }
@@ -431,7 +425,7 @@ a:active {
   
   .image-caption {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
   }
 
@@ -484,3 +478,77 @@ a:active {
     transform: scale(1) rotate(360deg);
   }
   
+
+
+  :root {
+    --background-color-dark: black;
+    --text-color-dark: white;
+    --blob-gradient-dark: linear-gradient(to right, rgb(9, 112, 153), mediumpurple);
+    --blur-opacity-dark: 0.8;
+
+    --background-color-light: white;
+    --text-color-light: black;
+    --blob-gradient-light: linear-gradient(to right, blue, lightgreen);
+    --blur-opacity-light: 0.5;
+}
+
+body {
+    background-color: var(--background-color-dark);
+    margin: 0;
+}
+
+/* .container-profile{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+} */
+
+
+#interactive-section {
+    height: 200vh;
+    width: 200%;
+    position: fixed;
+    overflow: hidden;
+    background-color: var(--background-color-dark);
+    margin-top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+/* @keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+} */
+
+#blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: var(--blob-gradient-dark);
+    animation: rotate 20s infinite;
+    opacity: var(--blur-opacity-dark);
+    z-index: 1;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(10vmax);
+}
+
+
+
+

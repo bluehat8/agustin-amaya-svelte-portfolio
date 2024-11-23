@@ -11,6 +11,8 @@ declare global {
 }
 
 export {};
+export const cvUrl = 'https://example.com/image.jpg';
+
 
 
 
