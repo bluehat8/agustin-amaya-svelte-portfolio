@@ -1,14 +1,16 @@
 <script lang="ts">
   import About from '../components/about.svelte';
   import Skills from '../components/skills.svelte';
-  import { reveal, setDefaultOptions } from 'svelte-reveal';
   import '../styles/global.css';
   import Download from './icons/download.svelte';
   import Facebook from './icons/facebook.svelte';
   import Rocket from './icons/rocket.svelte';
-  import { cvUrl, linkedinUrl, githubUrl } from '../scripts/urls';
-    import Projects from './projects.svelte';
+  import Mailto from './icons/mailto.svelte';
+
+  import { cvUrl, linkedinUrl, githubUrl, profileUrl } from '../scripts/urls';
+  import Projects from './projects.svelte';
   let activeLink = 'about';
+
   function handleLinkClick(linkId : string) {
     activeLink = linkId;
   }
@@ -34,9 +36,9 @@
               <div class="menu-circle position-absolute top-0 start-0 m-4"></div>
 
             <div class="flex">
-              <a href="#test" class="btn-custom position-absolute top-0 end-0 m-4 text-white">
+              <a href="mailto:agustin.amaya.g21@gmail.com" class="btn-custom position-absolute top-0 end-0 m-4 text-white">
                 <span class="svgContainer">
-                  <Facebook/>
+                  <Mailto/>
                 </span>
                 <span class="BG-facebook"></span> 
 
@@ -56,7 +58,7 @@
         
 
         <div>
-          <img src="https://firebasestorage.googleapis.com/v0/b/tiendaskd-779b1.appspot.com/o/images%2F464d3aac-0e87-4c31-995c-9cd9972b2dc7.png?alt=media&token=f9d4a0df-57af-443c-b067-72d67be2a3bc" alt="Imagen de perfil" class="rounded-full h-24 w-24 profile-image">
+          <img src="{profileUrl}" alt="Imagen de perfil" class="rounded-full h-24 w-24 profile-image">
         </div>
 
           <div class="flex w-full max-w-4xl items-center global-padding" >
