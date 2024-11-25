@@ -104,7 +104,7 @@
   
       <footer class="full max-w-4xl mt-3">
         <div class="container mx-auto flex flex-col items-center">
-          <p class="mb-2 mt-2 text-secondary">&copy; 2024 My Website. All rights reserved.</p>
+          <p class="mb-2 mt-2 text-secondary">&copy; 2024 Agustin Amaya. All rights reserved.</p>
           <nav class="nav-light w-full">
             <ul class="flex justify-center space-x-4">
               <li>
