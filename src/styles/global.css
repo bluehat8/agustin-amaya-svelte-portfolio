@@ -70,8 +70,8 @@ color: #fff;
         }
 
         .about-padding{
-          padding-left: 60px !important;
-          padding-right: 60px !important;
+          padding-left: 40px !important;
+          padding-right: 40px !important;
         }
 
         .profile-image {
@@ -323,8 +323,8 @@ a:active {
     }
 
     .about-padding{
-      padding-left: 40px !important;
-      padding-right: 40px !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
     }
   }
 
