@@ -29,8 +29,8 @@
         description: "DeFi platform for decentralized connectivity.",
         url: "https://cuchulink-base.vercel.app/",
         tags: ["Blockchain", "Solidity", "Scaffold ETH2", "Next.js", "DaysiUI"],
-        imageUrl: "https://images.pexels.com/photos/2859169/pexels-photo-2859169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        githubUrl: "https://github.com/example/creduchain",
+        imageUrl: "/images/cuchulink.jpg",
+        githubUrl: "https://github.com/Shigerubt/cuchulink-mvp-eth-mexico/tree/dev",
       },
       {
         title: "Creduchain",
@@ -38,7 +38,7 @@
         url: "https://creduchain-creduchain-app.titd1s.easypanel.host/",
         tags: ["Django", "Solidity", "Bootstrap", "Python", "PostreSQL"],
         imageUrl: "/images/creduchain_logo.png",
-        githubUrl: "https://github.com/example/creduchain",
+        githubUrl: "https://github.com/bluehat8/Creduchain-app",
       },
       {
         title: "SOFIA",
@@ -46,7 +46,7 @@
         url: "https://sofia-landing-page.vercel.app/",
         tags: ["CSS", "Svelte", "Tailwind", "Typescript"],
         imageUrl: "/images/sofia-landing.png",
-        githubUrl: "https://github.com/example/creduchain",
+        githubUrl: "https://github.com/bluehat8/Sofia-landing-page",
       },
     ];
   </script>

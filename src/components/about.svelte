@@ -10,13 +10,6 @@
         <h1 class="text-2xl font-bold mb-2">Hello! 👋</h1>
         <p>I'm Agustin Amaya. I am a Systems Engineer graduated from the National University of Engineering with experience in the design and deployment of web and desktop applications using the .NET ecosystem. I work agilely with methodologies such as Scrum, and have actively participated in important projects such as job search platforms and dental management web systems.</p>
         <br>
-        <p>            
-            I have actively participated in important projects such as job
-            search platforms, web-based dental management systems. My
-            focus is on understanding the business needs to implement
-            the most appropriate technology.   
-        </p>
-        <br>
         <p>
             Additionally, I am an enthusiast of blockchain technology and web3. I have assumed the role of a Smart Contract developer in various hackathons that I have participated in, winning first place in one of them for the best decentralized application on Ethereum.
         </p>
