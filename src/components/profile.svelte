@@ -7,7 +7,7 @@
   import Rocket from './icons/rocket.svelte';
   import Mailto from './icons/mailto.svelte';
 
-  import { cvUrl, linkedinUrl, githubUrl, profileUrl } from '../scripts/urls';
+  import { cvUrl, linkedinUrl, githubUrl, profileUrl, instagramUrl } from '../scripts/urls';
   import Projects from './projects.svelte';
   let activeLink = 'about';
 
@@ -108,18 +108,18 @@
           <nav class="nav-light w-full">
             <ul class="flex justify-center space-x-4">
               <li>
-                <a href="#test" class="hover:text-gray-400">
+                <a href="{githubUrl}" target="_blank" class="hover:text-gray-400">
                   <i class="fa-brands fa-github mr-2"></i>
                 </a>
               </li>
             
               <li>
-                <a href="#test" class="hover:text-gray-400">
+                <a href="{instagramUrl}" target="_blank" class="hover:text-gray-400">
                   <i class="fa-brands fa-instagram mr-2"></i>
                 </a>
               </li>
               <li>
-                <a href="#test" class="hover:text-gray-400">
+                <a href="{linkedinUrl}" target="_blank" class="hover:text-gray-400">
                   <i class="fa-brands fa-linkedin mr-2"></i>
                 </a>
               </li>
