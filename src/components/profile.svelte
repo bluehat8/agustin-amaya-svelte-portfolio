@@ -7,6 +7,7 @@
   import Facebook from './icons/facebook.svelte';
   import Rocket from './icons/rocket.svelte';
   import { cvUrl, linkedinUrl, githubUrl } from '../scripts/urls';
+    import Projects from './projects.svelte';
   let activeLink = 'about';
   function handleLinkClick(linkId : string) {
     activeLink = linkId;
@@ -84,7 +85,7 @@
 
         </div>
         <!-- CARD CONTENT -->
-        <div class="mt-8">
+        <div class="mt-6 pr-8 pl-8">
           <!-- Render the appropriate component based on the active link -->
           {#if activeLink === 'about'}
             <About />
@@ -94,6 +95,7 @@
             <!-- <Experience /> -->
           {:else if activeLink === 'projects'}
             <!-- <Projects /> -->
+            <Projects />
           {/if}
         </div>
       </div>
