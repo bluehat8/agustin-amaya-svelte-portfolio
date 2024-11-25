@@ -82,7 +82,7 @@
         <div class="flex items-center p-8 mt-3">
           <a href="#about" class="nav-link text-inherit active:text-blue-500" class:active-link={activeLink === 'about'} on:click={() => handleLinkClick('about')}>About</a>
           <a href="#skills" class="nav-link" class:active-link={activeLink === 'skills'} on:click={() => handleLinkClick('skills')}>Skills</a>
-          <a href="#experience" class="nav-link" class:active-link={activeLink === 'experience'} on:click={() => handleLinkClick('experience')}>Timeline</a>
+          <!-- <a href="#experience" class="nav-link" class:active-link={activeLink === 'experience'} on:click={() => handleLinkClick('experience')}>Timeline</a> -->
           <a href="#projects" class="nav-link" class:active-link={activeLink === 'projects'} on:click={() => handleLinkClick('projects')}>Projects</a>
 
         </div>
