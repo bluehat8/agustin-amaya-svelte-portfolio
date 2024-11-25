@@ -1,30 +1,62 @@
-<script>
-    import '../styles/global.css'
+<script lang="ts">
+  import '../styles/skills.css';
 
+  import Icon from '@iconify/svelte';
+
+  export let skillCategories = [
+    {
+      category: "Web Development",
+      skills: [
+        { name: "JQuery", icon: "devicon:jquery"  },
+        { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
+        { name: "JavaScript", icon: "logos:javascript" },
+        { name: "TypeScript", icon: "logos:typescript-icon" },
+        { name: "SQL Server", icon: "devicon:microsoftsqlserver" },
+        { name: "MySQL", icon: "logos:mysql" },
+        { name: "Git", icon: "logos:git-icon" },
+        { name: "API REST", icon: "material-symbols:api-rounded" },
+        { name: "C#", icon: "devicon:csharp" },
+      ],
+    },
+    {
+      category: "Frameworks",
+      skills: [
+        { name: "React", icon: "logos:react" },
+        { name: "Svelte", icon: "devicon:svelte" },
+        { name: "Node.js", icon: "logos:nodejs-icon" },
+        { name: "Nest.js", icon: "logos:nestjs" },
+        { name: "Django", icon: "logos:django" },
+        { name: ".NET Core", icon: "logos:dotnet" },
+        { name: "Laravel", icon: "logos:laravel" },
+        { name: "Next.js", icon: "logos:nextjs-icon" },
+      ],
+    },
+    {
+      category: "Web3",
+      skills: [
+        { name: "Solidity", icon: "logos:solidity" },
+        { name: "Web3.js", icon: "logos:web3js" },
+        { name: "Scaffold-ETH2", icon: "logos:ethereum" },
+      ],
+    },
+  ];
 </script>
 
-<section id="post" class="post-section global-padding">
-    <div class="post-content text-white">
-        <h2>MY SKILS! 👋</h2>
-        <p>I'm Jhey (pronounced "J"). I'm a web developer that thrives on bringing ideas to life with code!</p>
-        <p>I advocate for creative coding giving you the confidence to build anything imaginable. I enjoy speaking about this and showing people how to level up their skills.</p>
-        <p>I'm known for my whimsical creations and ability to solve complex problems. This led to me getting branded as somewhat of a polyglot coder. It's incredible to me that you can open a computer and learn about anything at your fingertips!</p>
-    </div>
-
-    <div class="image-container">
-      <img src="images/bg-profile3.png" alt="Descripción de la imagen" class="post-image">
-      <p class="image-caption text-secondary">Texto centrado debajo de la imagen</p>
-    </div>
-
-    <div class="image-container">
-        <img src="images/bg-profile3.png" alt="Descripción de la imagen" class="post-image">
-        <p class="image-caption text-secondary">Texto centrado debajo de la imagen</p>
-      </div>  <div class="image-container">
-        <img src="images/bg-profile3.png" alt="Descripción de la imagen" class="post-image">
-        <p class="image-caption text-secondary">Texto centrado debajo de la imagen</p>
-      </div>  <div class="image-container">
-        <img src="images/bg-profile3.png" alt="Descripción de la imagen" class="post-image">
-        <p class="image-caption text-secondary">Texto centrado debajo de la imagen</p>
+  <div class="skills-container p-4 mb-8">
+  {#each skillCategories as category}
+    <div class="mb-6">
+      <h4 class="text-base font-semibold text-gray-300 mb-3 text-center uppercase tracking-wider">
+        {category.category}
+      </h4>
+      <div class="category-divider mb-4"></div>
+      <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+        {#each category.skills as skill}
+          <div class={`flex flex-col items-center justify-center gap-2 p-3 rounded-md bg-gradient-to-r skill-card`} >
+            <Icon icon={skill.icon} width="40" height="40" /> 
+            <span class="text-white font-medium text-sm text-center">{skill.name}</span>
+          </div>
+        {/each}
       </div>
-  
-</section>
+    </div>
+  {/each}
+  </div>

@@ -1,0 +1,115 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+
+  .skill-card {
+    /* transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); */
+    min-height: 100px;
+    position: relative;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  /* .skill-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.5);
+  } */
+
+  .category-divider {
+    height: 1px;
+    width: 50%;
+    margin: 0 auto; 
+    background: linear-gradient(to right, #6b7280, #9ca3af); 
+    border: none;
+  }
+  
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .gradient-cyan-blue {
+    background: linear-gradient(to right, #06b6d4, #3b82f6);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+  }
+
+  .gradient-yellow {
+    background: linear-gradient(to right, #facc15, #fde047);
+  }
+
+  .gradient-blue-light {
+    background: linear-gradient(to right, #2563eb, #60a5fa);
+  }
+
+  .gradient-green {
+    background: linear-gradient(to right, #16a34a, #86efac);
+  }
+
+  .gradient-dark-blue {
+    background: linear-gradient(to right, #1e3a8a, #2563eb);
+  }
+
+  .gradient-red {
+    background: linear-gradient(to right, #dc2626, #f87171);
+  }
+
+  .gradient-light-blue {
+    background: linear-gradient(to right, #60a5fa, #bfdbfe);
+  }
+
+  .gradient-gray {
+    background: linear-gradient(to right, #374151, #9ca3af);
+  }
+
+  .gradient-indigo-pink {
+    background: linear-gradient(to right, #6366f1, #ec4899);
+  }
+
+  .gradient-orange {
+    background: linear-gradient(to right, #f97316, #fbbf24);
+  }
+
+  .gradient-green-lime {
+    background: linear-gradient(to right, #22c55e, #a3e635);
+  }
+
+  .gradient-red-pink {
+    background: linear-gradient(to right, #ef4444, #ec4899);
+  }
+
+  .gradient-dark-gray {
+    background: linear-gradient(to right, #1f2937, #6b7280);
+  }
+
+  .gradient-light-gray {
+    background: linear-gradient(to right, #aaf2c1, #16f47d);
+  }
+
+  .gradient-purple {
+    background: linear-gradient(to right, #9333ea, #c084fc);
+  }
+
+  h4 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+  }
