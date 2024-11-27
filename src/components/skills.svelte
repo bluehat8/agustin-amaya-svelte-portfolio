@@ -16,6 +16,8 @@
         { name: "Git", icon: "logos:git-icon" },
         { name: "API REST", icon: "material-symbols:api-rounded" },
         { name: "C#", icon: "devicon:csharp" },
+        { name: "PHP", icon: "vscode-icons:file-type-php2" },
+        { name: "Wordpress", icon: "skill-icons:wordpress" },
       ],
     },
     {
