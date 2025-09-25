@@ -11,6 +11,14 @@
   
     export let projects: Project[] = [
       {
+        title: "Neoark Capital Fund",
+        description: "NeoArk Capital Fund is an innovative financial platform that aims to democratize access to investment opportunities traditionally reserved for large capital or institutional investors.",
+        url: "https://neoarkcapital.io",
+        tags: ["Blockchain", "Solidity", "Next.js", "Nestjs", "PostgreSQL", "Thirdweb", 
+        "Ethers.js", "Hardhat"],
+        imageUrl: "/images/neoark.png",
+      },
+      {
         title: "Controller SEO",
         description: "Tool designed to monitor and optimize the SEO performance of local businesses.",
         url: "https://controllerseo.com/",
