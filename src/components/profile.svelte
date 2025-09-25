@@ -24,32 +24,30 @@
   </section>
 
 
-  <div class="container container-profile py-4">
+  <div class="mx-auto md:px-4 px-8 container-profile pt-14">
     
     <div class="flex flex-col items-center justify-center mt-5">
       <div class="w-full max-w-4xl glassmorphism rounded-lg shadow-md">
         <!-- CARD HEADER -->
         <div class="relative h-48">
-          <img src="/images/bow-lake-banff-national-park-canada-bow-river-astronomy-6000x4000-3719.jpg" alt="Imagen de encabezado" class="profile-background padding-0 object-cover  m-0">
-          <div class="absolute top-0 left-0 flex items-center justify-between w-full p-4">
+          <img src="/images/bow-lake-banff-national-park-canada-bow-river-astronomy-6000x4000-3719.jpg" alt="Imagen de encabezado" class="profile-background rounded-lg padding-0 object-cover  m-0">
           
-              <div class="menu-circle position-absolute top-0 start-0 m-4"></div>
+          <div class="menu-circle position-absolute top-0 start-0 m-4 mt-5"></div>
 
-            <div class="flex">
-              <a href="mailto:agustin.amaya.g21@gmail.com" class="btn-custom position-absolute top-0 end-0 m-4 text-white">
+          <div class="absolute top-0 right-0 p-4">
+              <a href="mailto:agustin.amaya.g21@gmail.com" class="btn-custom position-absolute top-0 end-0 text-white">
                 <span class="svgContainer">
                   <Mailto/>
                 </span>
                 <span class="BG-facebook"></span> 
-
               </a>
-            </div>
           </div>
+
         </div>
         <!-- CARD BODY -->
 
-        <div class="">
-          <a href="{cvUrl}" target="_blank" class="text-white cv-button position-absolute end-0 m-8 rounded-lg">
+        <div class="absolute top-40 right-0 m-4">
+          <a href="{cvUrl}" target="_blank" class="flex items-center cv-button gap-2 px-4 py-2 rounded-lg">
             <Download/>
             DOWNLOAD CV
           </a>
@@ -65,8 +63,8 @@
 
 
           <div class="mt-5 max-w-4xl global-padding">
-            <div class="mt-4 flex items-center">
-              <h5 class="text-2xl font-bold font-light">Agustín Amaya</h5>
+            <div class="mt-10 flex items-center">
+              <h5 class="text-2xl font-light">Agustín Amaya</h5>
               <Rocket/>
             </div>
             <a href="{githubUrl}" target="_blank" class="rounded-lg text-white hover:bg-gray-700"><i class="fa-brands fa-github mr-2"></i> @bluehat8</a>
@@ -93,10 +91,7 @@
             <About />
           {:else if activeLink === 'skills'}
             <Skills />
-          {:else if activeLink === 'experience'}
-            <!-- <Experience /> -->
           {:else if activeLink === 'projects'}
-            <!-- <Projects /> -->
             <Projects />
           {/if}
         </div>

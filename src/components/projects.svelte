@@ -13,7 +13,7 @@
       {
         title: "Controller SEO",
         description: "Tool designed to monitor and optimize the SEO performance of local businesses.",
-        url: "https://tool.controllerseo.com/login",
+        url: "https://controllerseo.com/",
         tags: ["Python", "Laravel", "JQuery", "MySQL", "Bootstrap", "Google maps API"],
         imageUrl: "/images/controllerseo.png",
       },
@@ -98,7 +98,7 @@
   
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 1.5rem;
     }
   
