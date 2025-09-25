@@ -15,14 +15,14 @@
 
     <div class="image-container">
       <img src="{ethVolcanoUrl}" alt="Descripción de la imagen" class="post-image">
-      <p class="image-caption text-secondary mb-5">Cuchulink as the best dapp on Ethereum at the ETH Volcano 2024 hackathon
+      <p class="image-caption text-gray-500 mb-5">Cuchulink as the best dapp on Ethereum at the ETH Volcano 2024 hackathon
       </p>
     </div>
 
 
     <div class="image-container">
         <img src="{neoarkUrl}" alt="Descripción de la imagen" class="post-image">
-        <p class="image-caption text-secondary mb-5">NeoArk Capital Fund
+        <p class="image-caption text-gray-500 mb-5">NeoArk Capital Fund
         </p>
     </div>
 </section>
