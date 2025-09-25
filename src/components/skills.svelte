@@ -18,6 +18,7 @@
         { name: "C#", icon: "devicon:csharp" },
         { name: "PHP", icon: "vscode-icons:file-type-php2" },
         { name: "Wordpress", icon: "skill-icons:wordpress" },
+        { name: "Node.js", icon: "logos:nodejs-icon" },
       ],
     },
     {
@@ -25,7 +26,6 @@
       skills: [
         { name: "React", icon: "logos:react" },
         { name: "Svelte", icon: "devicon:svelte" },
-        { name: "Node.js", icon: "logos:nodejs-icon" },
         { name: "Nest.js", icon: "logos:nestjs" },
         { name: "Django", icon: "logos:django" },
         { name: ".NET Core", icon: "logos:dotnet" },
@@ -36,9 +36,12 @@
     {
       category: "Web3",
       skills: [
-        { name: "Solidity", icon: "logos:solidity" },
-        { name: "Web3.js", icon: "logos:web3js" },
-        { name: "Scaffold-ETH2", icon: "logos:ethereum" },
+        { name: "Solidity", icon: "devicon-plain:solidity", color:"#7b00c5" },
+        { name: "Ethers.js", icon: "logos:web3js" },
+        { name: "Thirdweb", icon: "simple-icons:thirdweb", color:"#7b00c5" },
+        { name: "Hardhat", icon: "devicon:hardhat" },
+        { name: "Wagmi", icon: "simple-icons:wagmi", color:"#ffff" },
+        { name: "OpenZeppelin", icon: "simple-icons:openzeppelin", color:"#0396e2" },
       ],
     },
   ];
@@ -54,7 +57,7 @@
       <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
         {#each category.skills as skill}
           <div class={`flex flex-col items-center justify-center gap-2 p-3 rounded-md bg-gradient-to-r skill-card`} >
-            <Icon icon={skill.icon} width="40" height="40" /> 
+            <Icon style={"color: " + skill.color} icon={skill.icon} width="40" height="40" /> 
             <span class="text-white font-medium text-sm text-center">{skill.name}</span>
           </div>
         {/each}
