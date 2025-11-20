@@ -8,6 +8,7 @@
     tags: string[];
     imageUrl: string;
     githubUrl?: string;
+    appUrl?: string;
   }
 
   export let projects: Project[] = [
@@ -25,6 +26,7 @@
       url: "https://getcredipath.com",
       tags: [".NET CORE", "C#", "SQL Server", "React", "Tailwind CSS", "Typescript", "Entity Framework", "JWT", "API REST", "Google Auth"],
       imageUrl: "/images/bg-credipath.png",
+      appUrl: "https://credipath-client.vercel.app/",
     },
     {
       title: "Controller SEO",
