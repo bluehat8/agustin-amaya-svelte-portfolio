@@ -1,0 +1,64 @@
+.projects-container { padding: 1rem; padding-bottom: 3rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
+.project-card { background: #1f1f1f; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.2); }
+.project-image { width: 100%; height: 150px; object-fit: cover; }
+.project-info { padding: 1rem; }
+.project-title { font-size: 1.25rem; font-weight: bold; margin-bottom: 0.5rem; color: #fff; }
+.project-description { font-size: 0.9rem; margin-bottom: 1rem; color: #bbb; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem; }
+.tag { background:#2a2a2a; color:#fff; padding:0.3rem 0.6rem; border-radius:4px; font-size:0.8rem; }
+.project-links { display:flex; gap:0.5rem; margin-top:0.5rem; }
+.project-icon { display:flex; align-items:center; justify-content:center; width:40px; height:40px; background:#4a90e2; color:#fff; border-radius:50%; transition:background 0.3s ease; text-decoration:none; }
+.project-icon:hover { background:#3c78c0; }
+.details-button { margin:0.6rem 1rem 1rem 1rem; padding:0.45rem 0.8rem; border:1px solid rgba(74,144,226,0.18); background:transparent; color:#4a90e2; cursor:pointer; font-weight:600; border-radius:6px; }
+
+.details-inline { 
+    position: relative; 
+    right:0; 
+    top:0; 
+    height:auto; 
+    width:100%; 
+    z-index:50; 
+    display:flex; 
+    flex-direction:column; 
+    /* padding:1rem 0.5rem;  */
+    overflow-y:auto; 
+}
+.panel-header { display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem; }
+.back-button { 
+    background:transparent; 
+    border:none; 
+    color:#4a90e2; 
+    font-weight:700; 
+    font-size:3rem; 
+    cursor:pointer; 
+}
+
+/* Mobile - tweet-like view */
+@media (max-width:600px) {
+  .details-inline { position: fixed; inset:0; width:100%; height:100vh; padding:0; box-shadow:none; border-radius:0; }
+  .panel-header { position:sticky; top:0; z-index:5; background:#0f0f0f; padding:0.75rem 1rem; border-bottom:1px solid rgba(255,255,255,0.06); }
+  .panel-header h3 { margin:0; flex:1; text-align:center; font-size:1rem; color:#fff; }
+  .back-button { font-size:1.05rem; }
+}
+
+/* Tweet-like specifics */
+.tweet-view { padding:0.5rem 1rem 1.25rem 1rem; color:#fff; }
+.tweet-user { display:flex; gap:0.75rem; align-items:center; padding:0.5rem 0 0.5rem 0; }
+.avatar { width:48px; height:48px; border-radius:999px; object-fit:cover; background:#222; flex-shrink:0; }
+.user-info .name { font-weight:700; color:#fff; }
+.user-info .handle { font-size:0.85rem; color:#9aa0a6; margin-top:2px; }
+.tweet-content p { font-size:1.05rem; line-height:1.5; margin:0.5rem 0 0.75rem 0; color:#e6e6e6; white-space:pre-wrap; }
+.media-card { position:relative; margin-top:0.5rem; border-radius:12px; overflow:hidden; }
+.media-image { width:100%; height:auto; display:block; max-height:320px; object-fit:cover; }
+.media-caption { position:absolute; left:0.6rem; bottom:0.6rem; background:rgba(0,0,0,0.6); color:#fff; padding:0.35rem 0.6rem; border-radius:6px; font-size:0.9rem; }
+.meta-row .timestamp { color:#9aa0a6; font-size:0.85rem; margin:0.75rem 0; }
+.stats-row { display:flex; gap:1.25rem; color:#9aa0a6; padding:0.5rem 0 1rem 0; border-bottom:1px solid rgba(255,255,255,0.03); }
+.stats-row .stat strong { color:#fff; margin-right:0.35rem; }
+.tweet-actions { display:flex; gap:0.5rem; padding:0.6rem 0.9rem; align-items:center; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.02); }
+.action { display:inline-flex; gap:0.5rem; align-items:center; background:transparent; border:none; color:#9aa0a6; cursor:pointer; font-size:0.95rem; padding:0.35rem 0.6rem; }
+.action svg { display:block; }
+.action span { font-size:0.95rem; color:#9aa0a6; }
+.share { color:#9aa0a6; display:inline-flex; align-items:center; }
+.more-button { background:transparent; border:none; color:#fff; cursor:pointer; }

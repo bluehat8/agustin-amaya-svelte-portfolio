@@ -85,7 +85,7 @@
 
         </div>
         <!-- CARD CONTENT -->
-        <div class="mt-6 pr-8 pl-8 tab-content" style="position: relative;">
+        <div class="pr-8 pl-8 tab-content" style="position: relative;">
           <!-- Render the appropriate component based on the active link -->
           {#if activeLink === 'about'}
             <About />
