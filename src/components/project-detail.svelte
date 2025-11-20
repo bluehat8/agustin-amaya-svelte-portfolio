@@ -9,11 +9,7 @@
 </script>
 
 <div class="details-inline px-6 pt-4" aria-labelledby="panel-title">
-  {#if project.url}
-    <a class="landing-top-left" href={project.url} target="_blank" rel="noopener noreferrer" aria-label="Ver landing">
-      <img src="/icons/web.svg" alt="Landing" width="18" height="18" />
-    </a>
-  {/if}
+ 
 
   <header class="panel-header">
     <button class="back-button" on:click={close} aria-label="Volver" style="display:flex;align-items:center;gap:0.5rem;">
@@ -38,10 +34,16 @@
 
     <div class="media-card">
       {#if project.url}
-        <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label="Abrir landing">
-          <img src={project.imageUrl} alt={project.title} class="media-image" />
+            <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label="Abrir landing">
+              <img src={project.imageUrl} alt={project.title} class="media-image" />
+            </a>
+            {#if project.url}
+        <a class="landing-top-right" href={project.url} target="_blank" rel="noopener noreferrer" aria-label="Ver landing">
+          <img src="/icons/web.svg" alt="Landing" width="18" height="18" />
         </a>
+      {/if}
       {:else}
+
         <img src={project.imageUrl} alt={project.title} class="media-image" />
       {/if}
       <div class="media-caption">{project.title}</div>
