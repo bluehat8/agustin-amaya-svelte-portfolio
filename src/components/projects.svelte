@@ -3,6 +3,7 @@
     interface Project {
       title: string;
       description: string;
+      fullDescription?: string; 
       url: string;
       tags: string[];
       imageUrl: string;
@@ -12,11 +13,22 @@
     export let projects: Project[] = [
       {
         title: "Neoark Capital Fund",
-        description: "NeoArk Capital Fund is an innovative financial platform that aims to democratize access to investment opportunities traditionally reserved for large capital or institutional investors.",
+        description: "NeoArk Capital Fund es una plataforma financiera innovadora que tiene como objetivo democratizar el acceso a oportunidades de inversión tradicionalmente reservadas a grandes inversores o inversores institucionales.",
         url: "https://neoarkcapital.io",
         tags: ["Blockchain", "Solidity", "Next.js", "Nestjs", "PostgreSQL", "Thirdweb", 
         "Ethers.js", "Hardhat"],
         imageUrl: "/images/neoark.png",
+
+      },
+      {
+        // Credipath Project
+      
+        title: "Credipath",
+        description: "Credipath es una aplicación de gestión de préstamos diseñada para equipos de cobranza y administración de préstamos.",
+        fullDescription: "Credipath es una aplicación de gestión de préstamos diseñada para equipos de cobranza y administración de préstamos. Permite a los usuarios rastrear, gestionar y optimizar el proceso de cobranza de préstamos de manera eficiente.",
+        url: "https://getcredipath.com",
+        tags: [".NET CORE", "C#", "SQL Server", "React", "Tailwind CSS", "Typescript", "Entity Framework", "JWT", "API REST", "Google Auth"],
+        imageUrl: "/images/bg-credipath.png",
       },
       {
         title: "Controller SEO",
@@ -57,6 +69,17 @@
         githubUrl: "https://github.com/bluehat8/Sofia-landing-page",
       },
     ];
+    
+    // Estado para el proyecto seleccionado y handlers del panel de detalles
+    let selectedProject: Project | null = null;
+
+    function openDetails(p: Project) {
+      selectedProject = p;
+    }
+
+    function closeDetails() {
+      selectedProject = null;
+    }
   </script>
   
   <section class="projects-container">
@@ -89,12 +112,78 @@
                   </a>
                 {/if}
               </div>
+              <button class="details-button" on:click={() => openDetails(project)}>Detalles</button>
             </div>
           </div>
         {/each}
       </div>
     {:else}
       <p class="no-projects">No projects to display.</p>
+    {/if}
+    {#if selectedProject}
+      <aside class="details-panel" aria-labelledby="panel-title">
+        <header class="panel-header">
+          <button class="back-button" on:click={closeDetails} aria-label="Volver">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <h3 id="panel-title">Post</h3>
+          <button class="more-button" aria-label="Más">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="19" cy="12" r="1.5" fill="currentColor"/></svg>
+          </button>
+        </header>
+
+        <div class="tweet-view">
+          <div class="tweet-user">
+            <img src={selectedProject.imageUrl} alt="avatar" class="avatar" />
+            <div class="user-info">
+              <div class="name">{selectedProject.title}</div>
+              <div class="handle">@{selectedProject.title.replace(/\s+/g, '').toLowerCase()}</div>
+            </div>
+          </div>
+
+          <div class="tweet-content">
+            <p>{@html selectedProject.description}</p>
+          </div>
+
+          <div class="media-card">
+            <img src={selectedProject.imageUrl} alt={selectedProject.title} class="media-image" />
+            <div class="media-caption">{selectedProject.title}</div>
+          </div>
+
+          <div class="meta-row">
+            <div class="timestamp">5:58 AM · Jun 7, 2024 · 161.3K Views</div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat"><strong>123</strong> <span>Comments</span></div>
+            <div class="stat"><strong>481</strong> <span>Retweets</span></div>
+            <div class="stat"><strong>588</strong> <span>Likes</span></div>
+            <div class="stat"><strong>95</strong> <span>Bookmarks</span></div>
+          </div>
+        </div>
+
+        <div class="panel-actions tweet-actions">
+          <button class="action" aria-label="Comment">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>123</span>
+          </button>
+          <button class="action" aria-label="Retweet">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 7v6a2 2 0 0 1-2 2h-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 17v-6a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>481</span>
+          </button>
+          <button class="action" aria-label="Like">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>588</span>
+          </button>
+          <button class="action" aria-label="Bookmark">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>95</span>
+          </button>
+          <a class="share" href={selectedProject.url} target="_blank" aria-label="Share">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3v14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </aside>
     {/if}
   </section>
   
@@ -183,5 +272,273 @@
     .project-icon:hover {
       background: #3c78c0;
     }
+
+    /* Detalles panel */
+    .details-button {
+      margin: 0.6rem 1rem 1rem 1rem;
+      padding: 0.45rem 0.8rem;
+      border: 1px solid rgba(74,144,226,0.18);
+      background: transparent;
+      color: #4a90e2;
+      cursor: pointer;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    .details-panel {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      background: #0f0f0f;
+      box-shadow: -16px 0 40px rgba(0,0,0,0.6);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-button {
+      background: transparent;
+      border: none;
+      color: #4a90e2;
+      font-weight: 700;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .panel-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: start;
+      width: 100%;
+    }
+
+    .panel-image {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .panel-content {
+      padding: 0.25rem 0.5rem;
+    }
+
+    .panel-description {
+      color: #ccc;
+      margin-bottom: 0.75rem;
+    }
+
+    .panel-links .project-icon {
+      width: auto;
+      height: auto;
+      padding: 0.45rem 0.8rem;
+      border-radius: 6px;
+      background: #4a90e2;
+      color: #fff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .panel-body {
+        grid-template-columns: 1fr;
+      }
+      .panel-image {
+        height: 220px;
+      }
+    }
+
+    /* Mobile - tweet-like view */
+    @media (max-width: 600px) {
+      .details-panel {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .panel-header {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #0f0f0f;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .panel-header h3 {
+        margin: 0;
+        flex: 1;
+        text-align: center;
+        font-size: 1rem;
+        color: #fff;
+      }
+
+      .back-button {
+        font-size: 1.05rem;
+      }
+
+      .panel-body {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+      }
+
+      .panel-image {
+        width: 100%;
+        height: 320px;
+        border-radius: 0;
+      }
+
+      .panel-content {
+        padding: 0.5rem 0;
+      }
+
+      .panel-actions {
+        position: sticky;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(15,15,15,0.95), rgba(15,15,15,1));
+        padding: 0.65rem 1rem;
+        display: flex;
+        gap: 0.5rem;
+        z-index: 6;
+      }
+
+      .panel-actions .project-icon {
+        flex: 1;
+        text-align: center;
+        padding: 0.7rem 0.6rem;
+        border-radius: 999px;
+        font-weight: 600;
+      }
+    }
+
+    /* Tweet-like specifics */
+    .tweet-view {
+      padding: 0.5rem 1rem 1.25rem 1rem;
+      color: #fff;
+    }
+
+    .tweet-user {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 0.5rem 0 0.5rem 0;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      object-fit: cover;
+      background: #222;
+      flex-shrink: 0;
+    }
+
+    .user-info .name {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .user-info .handle {
+      font-size: 0.85rem;
+      color: #9aa0a6;
+      margin-top: 2px;
+    }
+
+    .tweet-content p {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 0.5rem 0 0.75rem 0;
+      color: #e6e6e6;
+      white-space: pre-wrap;
+    }
+
+    .media-card {
+      position: relative;
+      margin-top: 0.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .media-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      object-fit: cover;
+    }
+
+    .media-caption {
+      position: absolute;
+      left: 0.6rem;
+      bottom: 0.6rem;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .meta-row .timestamp {
+      color: #9aa0a6;
+      font-size: 0.85rem;
+      margin: 0.75rem 0;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 1.25rem;
+      color: #9aa0a6;
+      padding: 0.5rem 0 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .stats-row .stat strong { color: #fff; margin-right: 0.35rem; }
+
+    .tweet-actions {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.6rem 0.9rem;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.02);
+    }
+
+    .action {
+      display: inline-flex;
+      gap: 0.5rem;
+      align-items: center;
+      background: transparent;
+      border: none;
+      color: #9aa0a6;
+      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 0.35rem 0.6rem;
+    }
+
+    .action svg { display: block; }
+
+    .action span { font-size: 0.95rem; color: #9aa0a6; }
+
+    .share { color: #9aa0a6; display: inline-flex; align-items: center; }
+
+    .more-button { background: transparent; border: none; color: #fff; cursor: pointer; }
   </style>
   
