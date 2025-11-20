@@ -121,7 +121,7 @@
       <p class="no-projects">No projects to display.</p>
     {/if}
     {#if selectedProject}
-      <aside class="details-panel" aria-labelledby="panel-title">
+      <aside class="details-panel px-10 pt-4" aria-labelledby="panel-title">
         <header class="panel-header">
           <button class="back-button" on:click={closeDetails} aria-label="Volver">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -286,17 +286,18 @@
     }
 
     .details-panel {
-      position: fixed;
+      /* contained inside parent panel (profile card) */
+      position: absolute;
       right: 0;
       top: 0;
-      height: 100vh;
+      height: 100%;
       width: 100%;
       background: #0f0f0f;
-      box-shadow: -16px 0 40px rgba(0,0,0,0.6);
+      box-shadow: -8px 0 24px rgba(0,0,0,0.45);
       z-index: 50;
       display: flex;
       flex-direction: column;
-      padding: 1rem;
+      /* padding: 1rem; */
       overflow-y: auto;
     }
 
@@ -365,6 +366,7 @@
     /* Mobile - tweet-like view */
     @media (max-width: 600px) {
       .details-panel {
+        /* On small screens we keep the full-viewport, tweet-like experience */
         position: fixed;
         inset: 0;
         width: 100%;

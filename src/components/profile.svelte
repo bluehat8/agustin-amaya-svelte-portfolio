@@ -27,7 +27,7 @@
   <div class="mx-auto md:px-4 px-8 container-profile pt-14">
     
     <div class="flex flex-col items-center justify-center mt-5">
-      <div class="w-full max-w-4xl glassmorphism rounded-lg shadow-md">
+      <div class="w-full max-w-4xl glassmorphism rounded-lg shadow-md panel-container" style="position: relative;">
         <!-- CARD HEADER -->
         <div class="relative h-48">
           <img src="/images/bow-lake-banff-national-park-canada-bow-river-astronomy-6000x4000-3719.jpg" alt="Imagen de encabezado" class="profile-background rounded-lg padding-0 object-cover  m-0">
@@ -85,7 +85,7 @@
 
         </div>
         <!-- CARD CONTENT -->
-        <div class="mt-6 pr-8 pl-8">
+        <div class="mt-6 pr-8 pl-8 tab-content" style="position: relative;">
           <!-- Render the appropriate component based on the active link -->
           {#if activeLink === 'about'}
             <About />
