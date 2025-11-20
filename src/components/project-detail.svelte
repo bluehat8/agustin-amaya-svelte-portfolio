@@ -28,7 +28,7 @@
     </div>
 
 
-    <div class="tweet-content">
+    <div class="tweet-content text-sm">
       <p>{@html project.fullDescription ?? project.description}</p>
     </div>
 

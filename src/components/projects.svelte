@@ -22,7 +22,7 @@
     {
       title: "Credipath",
       description: "Credipath es una aplicación de gestión de préstamos diseñada para equipos de cobranza y administración de préstamos.",
-      fullDescription: "Credipath es una aplicación de gestión de préstamos diseñada para equipos de cobranza y administración de préstamos. Permite a los usuarios rastrear, gestionar y optimizar el proceso de cobranza de préstamos de manera eficiente.",
+      fullDescription: "Credipath es una aplicación de gestión de préstamos diseñada para equipos de cobranza y administración. Incluye un backend RESTful en ASP.NET Core que expone toda la lógica de negocio (clientes, préstamos, amortizaciones, pagos flexibles, conciliaciones y reportes) y un sistema de permisos para usuarios (administradores, cobradores, supervisores). La API está pensada para integrarse con una interfaz web tipo dashboard (administración y reportes) y una app móvil ligera para cobradores de campo que necesitan ver rutas, registrar pagos y emitir recibos.",
       url: "https://getcredipath.com",
       tags: [".NET CORE", "C#", "SQL Server", "React", "Tailwind CSS", "Typescript", "Entity Framework", "JWT", "API REST", "Google Auth"],
       imageUrl: "/images/bg-credipath.png",

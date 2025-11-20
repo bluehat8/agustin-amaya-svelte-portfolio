@@ -68,7 +68,7 @@
 .avatar { width:48px; height:48px; border-radius:999px; object-fit:cover; background:#222; flex-shrink:0; }
 .user-info .name { font-weight:700; color:#fff; }
 .user-info .handle { font-size:0.85rem; color:#9aa0a6; margin-top:2px; }
-.tweet-content p { font-size:1.05rem; line-height:1.5; margin:0.5rem 0 0.75rem 0; color:#e6e6e6; white-space:pre-wrap; }
+.tweet-content p { font-size:0.96rem; line-height:1.5; margin:0.5rem 0 0.75rem 0; color:#e6e6e6; white-space:pre-wrap; }
 .media-card { position:relative; margin-top:0.5rem; border-radius:12px; overflow:hidden; }
 .media-image { width:100%; height:auto; display:block; max-height:320px; object-fit:cover; }
 .media-caption { position:absolute; left:0.6rem; bottom:0.6rem; background:rgba(0,0,0,0.6); color:#fff; padding:0.35rem 0.6rem; border-radius:6px; font-size:0.9rem; }
