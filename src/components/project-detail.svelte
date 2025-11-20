@@ -9,6 +9,12 @@
 </script>
 
 <div class="details-inline px-6 pt-4" aria-labelledby="panel-title">
+  {#if project.url}
+    <a class="landing-top-left" href={project.url} target="_blank" rel="noopener noreferrer" aria-label="Ver landing">
+      <img src="/icons/web.svg" alt="Landing" width="18" height="18" />
+    </a>
+  {/if}
+
   <header class="panel-header">
     <button class="back-button" on:click={close} aria-label="Volver" style="display:flex;align-items:center;gap:0.5rem;">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -31,7 +37,13 @@
     </div>
 
     <div class="media-card">
-      <img src={project.imageUrl} alt={project.title} class="media-image" />
+      {#if project.url}
+        <a href={project.url} target="_blank" rel="noopener noreferrer" aria-label="Abrir landing">
+          <img src={project.imageUrl} alt={project.title} class="media-image" />
+        </a>
+      {:else}
+        <img src={project.imageUrl} alt={project.title} class="media-image" />
+      {/if}
       <div class="media-caption">{project.title}</div>
     </div>
 

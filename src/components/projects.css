@@ -25,6 +25,23 @@
     /* padding:1rem 0.5rem;  */
     overflow-y:auto; 
 }
+.landing-top-left {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.6rem;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 8px;
+  padding: 6px;
+  text-decoration: none;
+}
+.landing-top-left img { display:block; width:18px; height:18px; }
+.landing-top-left:hover { background: rgba(0,0,0,0.6); }
 .panel-header { display:flex; align-items:center; gap:1rem; margin-bottom:0.5rem; }
 .back-button { 
     background:transparent; 
