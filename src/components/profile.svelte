@@ -49,7 +49,7 @@
         <div class="absolute top-40 right-0 m-4">
           <a href="{cvUrl}" target="_blank" class="flex items-center cv-button gap-2 px-4 py-2 rounded-lg">
             <Download/>
-            DOWNLOAD CV
+            DESCARGAR CV
           </a>
 
         </div>
