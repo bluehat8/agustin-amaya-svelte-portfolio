@@ -4,6 +4,7 @@
     title: string;
     description: string;
     fullDescription?: string;
+    status?: string;
     url: string;
     tags: string[];
     imageUrl: string;
@@ -39,7 +40,7 @@
     },
     {
       title: "Controller SEO",
-      description: "Tool designed to monitor and optimize the SEO performance of local businesses.",
+      description: "Herramienta para monitorear y optimizar el SEO de negocios locales.",
       url: "https://controllerseo.com/",
       tags: ["Python", "Laravel", "JQuery", "MySQL", "Bootstrap", "Google maps API"],
       imageUrl: "/images/controllerseo.png",
@@ -48,6 +49,7 @@
       title: "Juridiconnect",
       description: "Marketplace legal que conecta clientes con abogados verificados mediante un sistema de casos, propuestas y contratos con pagos escalonados.",
       fullDescription: "JuridiConnect es una plataforma full-stack de servicios legales tipo marketplace (similar a Upwork pero especializada en abogados) que permite a clientes publicar casos legales y recibir propuestas de abogados verificados. El sistema incluye un riguroso proceso de verificación profesional con exámenes de certificación por especialidad, gestión completa de contratos con pagos por hitos, sistema de mensajería en tiempo real, y servicios de consultoría y notariales.",
+      status: "En construcción",
       url: "https://juridiconect.com",
       tags: [".NET CORE", "SUPABASE", "PostgreSQL", "Next.js", "Typescript"],
       imageUrl: "/images/bg-juridiconnect.png",
@@ -55,14 +57,14 @@
     },
     {
       title: "Repher",
-      description: "Repher features a powerful platform that connects job seekers with employee referrals, enables employers to invite top candidates, and simplifies hiring through trusted, referral-based job postings.",
+      description: "Repher ofrece una plataforma que conecta a buscadores de empleo con referencias internas, permite a las empresas invitar a candidatos destacados y simplifica la contratación mediante ofertas basadas en referencias confiables.",
       url: "https://repher.sitefpo.com/",
       tags: ["C#", ".NET CORE", "JQUERY", "SQL Server", "AWS"],
       imageUrl: "/images/repher.png",
     },
     {
       title: "Cuchulink",
-      description: "DeFi platform for decentralized connectivity.",
+      description: "Plataforma DeFi para conectividad descentralizada.",
       url: "https://cuchulink-base.vercel.app/",
       tags: ["Blockchain", "Solidity", "Scaffold ETH2", "Next.js", "DaysiUI"],
       imageUrl: "/images/cuchulink.jpg",

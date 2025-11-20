@@ -22,7 +22,12 @@
     <div class="tweet-user">
       <img src={project.imageUrl} alt="avatar" class="avatar" />
       <div class="user-info">
-        <div class="name">{project.title}</div>
+        <div style="display:flex;align-items:center;gap:0.5rem;">
+          <div class="name">{project.title}</div>
+          {#if project.status}
+            <span style="background:#F59E0B;color:#000;padding:0.18rem 0.45rem;border-radius:6px;font-size:0.75rem;font-weight:600;">{project.status}</span>
+          {/if}
+        </div>
         <div class="handle">@{project.title.replace(/\s+/g, '').toLowerCase()}</div>
       </div>
     </div>
