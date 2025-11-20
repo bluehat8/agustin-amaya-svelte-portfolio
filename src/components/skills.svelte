@@ -3,7 +3,19 @@
 
   import Icon from '@iconify/svelte';
 
-  export let skillCategories = [
+
+  interface Skill {
+    name: string;
+    icon: string;     // Iconify
+    img?: string;      // Imagen local o URL
+    color?: string;    // Color opcional
+  }
+ interface SkillCategory {
+    category: string;
+    skills: Skill[];
+  }
+
+  export let skillCategories: SkillCategory[] = [
     {
       category: "Web Development",
       skills: [
@@ -17,8 +29,9 @@
         { name: "API REST", icon: "material-symbols:api-rounded" },
         { name: "C#", icon: "devicon:csharp" },
         { name: "PHP", icon: "vscode-icons:file-type-php2" },
-        { name: "Wordpress", icon: "skill-icons:wordpress" },
+        // { name: "Wordpress", icon: "skill-icons:wordpress" },
         { name: "Node.js", icon: "logos:nodejs-icon" },
+        { name: "Supabase", img: "/icons/supabase.svg", icon: "logos:nodejs-icon" },
       ],
     },
     {
@@ -57,8 +70,27 @@
       <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
         {#each category.skills as skill}
           <div class={`flex flex-col items-center justify-center gap-2 p-3 rounded-md bg-gradient-to-r skill-card`} >
-            <Icon style={"color: " + skill.color} icon={skill.icon} width="40" height="40" /> 
-            <span class="text-white font-medium text-sm text-center">{skill.name}</span>
+            <!-- <Icon style={"color: " + skill.color} icon={skill.icon} width="40" height="40" /> 
+            <span class="text-white font-medium text-sm text-center">{skill.name}</span> -->
+
+            {#if skill.img}
+              <!-- Mostrar imagen si existe -->
+              <img 
+                src={skill.img}
+                alt={skill.name}
+                class="w-10 h-10 object-contain"
+              />
+              <span class="text-white font-medium text-sm text-center">{skill.name}</span>
+            {:else}
+              <!-- Mostrar icono de Iconify -->
+              <Icon
+                icon={skill.icon}
+                style={"color: " + (skill.color || "white")}
+                width="40"
+                height="40"
+              />
+              <span class="text-white font-medium text-sm text-center">{skill.name}</span>
+            {/if}
           </div>
         {/each}
       </div>

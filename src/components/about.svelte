@@ -5,24 +5,24 @@
 
 <section id="post" class="post-section about-padding">
     <div class="post-content text-white">
-        <h1 class="text-2xl font-bold mb-2">Hello! 👋</h1>
-        <p>I'm Agustin Amaya, a Systems Engineer with experience building end-to-end web solutions. I specialize in designing and deploying applications using technologies like .NET, NestJS, and React. My focus on agile methodologies such as Scrum has enabled me to lead the delivery of successful projects, from job search platforms to dental management systems.</p>
+        <h1 class="text-2xl font-bold mb-2">¡Hola! 👋</h1>
+        <p>Soy Agustín Amaya, Ingeniero en Sistemas con experiencia en la creación de soluciones web de extremo a extremo. Me especializo en diseñar y desplegar aplicaciones usando tecnologías como .NET, NestJS y React. Mi enfoque en metodologías ágiles como Scrum me ha permitido liderar la entrega de proyectos exitosos, desde plataformas de búsqueda de empleo hasta sistemas de gestión odontológica.</p>
         <br>
         <p>
-            My passion for technology led me to the blockchain world. I've taken on the role of smart contract developer in various hackathons, even winning first place for best decentralized application on Ethereum with my project Cuchulink at ETH Volcano 2024. Recently, I led the launch of NeoArk Capital Fund, where I designed and implemented a complete Web3 investment platform. I'm motivated by transforming complex ideas into functional products that generate real value.
+            Mi pasión por la tecnología me llevó al mundo del blockchain. He desempeñado el rol de desarrollador de contratos inteligentes en varios hackathons, incluso obteniendo el primer puesto a la mejor aplicación descentralizada en Ethereum con mi proyecto Cuchulink en ETH Volcano 2024. Recientemente, lideré el lanzamiento del Fondo NeoArk Capital, donde diseñé e implementé una plataforma de inversión Web3 completa. Me motiva transformar ideas complejas en productos funcionales que generan valor real.
         </p>
     </div>
 
     <div class="image-container">
       <img src="{ethVolcanoUrl}" alt="Descripción de la imagen" class="post-image">
-      <p class="image-caption text-gray-500 mb-5">Cuchulink as the best dapp on Ethereum at the ETH Volcano 2024 hackathon
+      <p class="image-caption text-gray-500 mb-5">Cuchulink como la mejor dapp en Ethereum en el hackathon ETH Volcano 2024
       </p>
     </div>
 
 
     <div class="image-container">
         <img src="{neoarkUrl}" alt="Descripción de la imagen" class="post-image">
-        <p class="image-caption text-gray-500 mb-5">NeoArk Capital Fund
+        <p class="image-caption text-gray-500 mb-5">Fondo NeoArk Capital
         </p>
     </div>
 </section>
