@@ -10,7 +10,7 @@
 </script>
 
 {#if projects.length > 0}
-  <div class="grid">
+  <div class="projects-grid">
     {#each projects as project (project.title)}
       <ProjectCard {project} on:open={handleOpen} />
     {/each}
