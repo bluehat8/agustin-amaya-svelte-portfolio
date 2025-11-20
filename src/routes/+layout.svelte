@@ -20,7 +20,7 @@
     </div>
     <div class="flex justify-between items-center">
     <div class="flex-1"></div>
-    <Toogle></Toogle>
+    <!-- <Toogle></Toogle> -->
     <!-- <ThemeToggle client:visible />
     <DropdownMenu client:visible tags={Array.from(allTags)} /> -->
   </div>
