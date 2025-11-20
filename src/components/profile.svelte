@@ -24,7 +24,7 @@
   </section>
 
 
-  <div class="mx-auto md:px-4 px-8 container-profile pt-14">
+  <div class="mx-auto md:px-4 px-4 container-profile pt-14">
     
     <div class="flex flex-col items-center justify-center mt-5">
       <div class="w-full max-w-4xl glassmorphism rounded-lg shadow-md panel-container" style="position: relative;">
