@@ -68,7 +68,7 @@
               <Rocket/>
             </div>
             <a href="{githubUrl}" target="_blank" class="rounded-lg text-white hover:bg-gray-700"><i class="fa-brands fa-github mr-2"></i> @bluehat8</a>
-            <p class="text-gray-500">Systems Engineer. Software Developer. Web3 Developer. SOFIA's Founder.</p>
+            <p class="text-gray-500 text-sm">Systems Engineer. Software Developer. Web3 Developer. SOFIA's Founder.</p>
             <div class="flex items-center mt-2">
               <p class="text-gray-500"><i class="fa-solid fa-location-dot mr-2"></i> Managua, Nicaragua</p>
               <a href="{linkedinUrl}" target="_blank" class="text-gray-500 ml-4 linkedin-text"><i class="fa-brands fa-linkedin mr-2"></i> agustinamaya</a>
