@@ -1,5 +1,5 @@
 .projects-container { padding: 1rem; padding-bottom: 3rem; }
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 .project-card { background: #1f1f1f; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 12px rgba(0,0,0,0.12); }
 .project-image { width: 100%; height: 140px; object-fit: cover; }
@@ -37,10 +37,12 @@
 
 /* Mobile - tweet-like view */
 @media (max-width:600px) {
-  .details-inline { position: fixed; inset:0; width:100%; height:100vh; padding:0; box-shadow:none; border-radius:0; }
-  .panel-header { position:sticky; top:0; z-index:5; background:#0f0f0f; padding:0.75rem 1rem; border-bottom:1px solid rgba(255,255,255,0.06); }
-  .panel-header h3 { margin:0; flex:1; text-align:center; font-size:1rem; color:#fff; }
-  .back-button { font-size:1.05rem; }
+  /* Keep the details view in normal flow on small screens so it replaces the list
+     instead of being absolutely positioned (which makes the parent collapse). */
+  .details-inline { position: relative; width: 100%; height: auto; padding: 0; box-shadow: none; border-radius: inherit; overflow: visible; z-index: 50; }
+  .panel-header { position: sticky; top: 0; z-index: 55; background: #0f0f0f; padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .panel-header h3 { margin: 0; flex: 1; text-align: center; font-size: 1rem; color: #fff; }
+  .back-button { font-size: 1.05rem; }
 }
 
 /* Tweet-like specifics */
@@ -65,7 +67,7 @@
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 900px) {
-  .projects-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem; }
+  .projects-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.85rem; }
   .project-image { height: 130px; }
 }
 
